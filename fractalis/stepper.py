@@ -129,8 +129,7 @@ def angled_stepper(size, new_size_deffer, tortuguita, n):
         tortuguita.left(angle / 2)
         tortuguita.forward(inscrit_size)
         tortuguita.pendown()
-        tortuguita.left(angle / 2)
-        tortuguita.left(180)
+        tortuguita.left(angle / 2 + 180)
         yield x
         tortuguita.left(-180)
     tortuguita.penup()
