@@ -18,30 +18,13 @@ def triangle_fractal_stepper(size, new_size_deffer, tortuguita):
 
 def square_fractal_mid_stepper(size, new_size_deffer, tortuguita):
     step_size = (size - new_size_deffer(size)) / 2
-    tortuguita.forward(step_size)
-    tortuguita.right(90)
-    yield 0
-    tortuguita.left(90)
-    tortuguita.forward(size - step_size)
-    tortuguita.left(90)
-    tortuguita.forward(step_size)
-    tortuguita.right(90)
-    yield 1
-    tortuguita.left(90)
-    tortuguita.forward(size - step_size)
-    tortuguita.left(90)
-    tortuguita.forward(step_size)
-    tortuguita.right(90)
-    yield 2
-    tortuguita.left(90)
-    tortuguita.forward(size - step_size)
-    tortuguita.left(90)
-    tortuguita.forward(step_size)
-    tortuguita.right(90)
-    yield 3
-    tortuguita.left(90)
-    tortuguita.forward(size - step_size)
-    tortuguita.left(90)
+    for x in range(0, 4):
+        tortuguita.forward(step_size)
+        tortuguita.right(90)
+        yield x
+        tortuguita.left(90)
+        tortuguita.forward(size - step_size)
+        tortuguita.left(90)
 
 
 def square_fractal_corner_stepper(size, new_size_deffer, tortuguita):
