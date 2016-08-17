@@ -59,13 +59,13 @@ def outter_triangle_fractal_stepper(size, new_size_deffer, tortuguita):
 def outter_triangle_fractal_stepper_upper(size, new_size_deffer, tortuguita):
     eraser_factor = 1.7
     step_size = (size - new_size_deffer(size)) / 2
+    now_color = tortuguita.color()
+    now_pensize = tortuguita.pensize()
     tortuguita.left(60)
     tortuguita.penup()
     tortuguita.forward(step_size)
     tortuguita.pendown()
     yield 0
-    now_color = tortuguita.color()
-    now_pensize = tortuguita.pensize()
     tortuguita.pensize(eraser_factor * now_pensize)
     tortuguita.color('white')
     tortuguita.forward(size - 2 * step_size)
@@ -77,8 +77,6 @@ def outter_triangle_fractal_stepper_upper(size, new_size_deffer, tortuguita):
     tortuguita.forward(step_size)
     tortuguita.pendown()
     yield 1
-    now_color = tortuguita.color()
-    now_pensize = tortuguita.pensize()
     tortuguita.pensize(eraser_factor * now_pensize)
     tortuguita.color('white')
     tortuguita.forward(size - 2 * step_size)
@@ -88,8 +86,6 @@ def outter_triangle_fractal_stepper_upper(size, new_size_deffer, tortuguita):
     tortuguita.forward(step_size)
     tortuguita.right(120)
     tortuguita.pendown()
-    now_color = tortuguita.color()
-    now_pensize = tortuguita.pensize()
     tortuguita.pensize(eraser_factor * now_pensize)
     tortuguita.color('white')
     tortuguita.forward(size)
