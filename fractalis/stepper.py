@@ -97,6 +97,7 @@ def outter_triangle_fractal_stepper_upper(size, new_size_deffer, tortuguita):
     tortuguita.pensize(now_pensize)
     tortuguita.color(now_color[0], now_color[1])
 
+
 def stopped_stepper(size, new_size_deffer, tortuguita):
 	yield 0
 
